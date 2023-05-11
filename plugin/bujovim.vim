@@ -1,5 +1,4 @@
 " vim: set fdm=marker:
-echo 'bullet journal loaded'
 
 " Bullet journal functions to add {{{1
 " Picker for note type {{{2
@@ -40,13 +39,23 @@ hi def BulletJournal3 ctermfg=yellow guifg=yellow
 hi def BulletJournal4 ctermfg=green guifg=green 
 hi def BulletJournal5 ctermfg=yellow guifg=green 
 hi def BulletJournal6 ctermfg=yellow guifg=green 
-hi def BulletJournal7 ctermfg=green guifg=green 
+hi def BulletJournal7 ctermfg=blue guifg=blue 
+hi def BulletJournal8 ctermfg=blue guifg=blue 
+hi def BulletJournal9 ctermfg=red guifg=red 
 
-" augroup longLines
-  " autocmd!
-  " au Bufenter *.org  match BulletJournal1 /\[\.\]/
-  au Bufenter *.org  AirlineRefresh
-" augroup END
+" au Bufenter *.org  AirlineRefresh
+
+fun! CallHighlight()
+  au Bufenter,BufRead *.org call matchadd('BulletJournal1', '\['.g:bulletjournalicons[0].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal2', '\['.g:bulletjournalicons[1].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal3', '\['.g:bulletjournalicons[2].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal4', '\['.g:bulletjournalicons[3].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal5', '\['.g:bulletjournalicons[4].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal6', '\['.g:bulletjournalicons[5].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal7', '\['.g:bulletjournalicons[6].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal8', '\['.g:bulletjournalicons[7].'\]')
+  au Bufenter,BufRead *.org call matchadd('BulletJournal9', '\['.g:bulletjournalicons[8].'\]')
+endf
 
 " Bullet journal Toggle icon {{{2
 " Bullet toggle forward {{{3
@@ -106,6 +115,7 @@ endf
 " Conceal attempts {{{2
 
 " Default keymaps {{{1
+nnoremap <Leader>bt :call BulletJournalConvertline()<CR>
 nnoremap <Leader>bs :call BulletJournalInsertAppend()<CR>
 nnoremap <Leader>bf :call BulletJournalnoteTogglerFoward()<CR> 
 nnoremap <Leader>bb :call BulletJournalnoteTogglerBackward()<CR> 

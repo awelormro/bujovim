@@ -40,10 +40,22 @@
 <Leader>bf	plugin/bujovim.vim	/^nnoremap <Leader>bf :call BulletJournalnoteTogglerFoward()<CR> $/;"	m
 <Leader>bs	plugin/bujovim.vim	/^nnoremap <Leader>bs :call BulletJournalInsertAppend()<CR>$/;"	m
 <Leader>bt	plugin/bujovim.vim	/^nnoremap <Leader>bt :call BulletJournalConvertline()<CR>$/;"	m
+<Leader>bu<Leader>t	plugin/bujovim.vim	/^nnoremap <Leader>bu<Leader>t :call BulletJournalnotepicker('task')<CR>$/;"	m
 BulletJournalConvertline	plugin/bujovim.vim	/^fun! BulletJournalConvertline()$/;"	f
 BulletJournalInsertAppend	plugin/bujovim.vim	/^fun! BulletJournalInsertAppend()$/;"	f
 BulletJournalnoteTogglerBackward	plugin/bujovim.vim	/^fun! BulletJournalnoteTogglerBackward()$/;"	f
 BulletJournalnoteTogglerFoward	plugin/bujovim.vim	/^fun! BulletJournalnoteTogglerFoward()$/;"	f
 BulletJournalnotepicker	plugin/bujovim.vim	/^fun! BulletJournalnotepicker(args)$/;"	f
 CallHighlight	plugin/bujovim.vim	/^fun! CallHighlight()$/;"	f
+OpenBulletJournal	plugin/bujovim.vim	/^function! OpenBulletJournal()$/;"	f
+Openbujo	plugin/bujovim.vim	/^command! -nargs=0 Openbujo call OpenBulletJournal()$/;"	c
+bujodefaulticons	plugin/bujovim.vim	/^    let bujodefaulticons[j]=g:bujoicons[j]$/;"	v
+bujodefaulticons	plugin/bujovim.vim	/^let bujodefaulticons=['\\.', 'x', 'o','\\*', '\\!', '\\-\\-', '»', '«', '+']$/;"	v
 bujovim	README.md	/^# bujovim$/;"	c
+g:bujovimheader	plugin/bujovim.vim	/^  let g:bujovimheader='\\#'$/;"	v
+g:bujovimheader	plugin/bujovim.vim	/^  let g:bujovimheader='\\*'$/;"	v
+g:bujovimheader	plugin/bujovim.vim	/^  let g:bujovimheader='\\='$/;"	v
+g:bullet_journal_extension	plugin/bujovim.vim	/^let g:bullet_journal_extension = get(g:, 'bulletjournalextension',    'markdown')$/;"	v
+g:bulletjournalicons	plugin/bujovim.vim	/^let g:bulletjournalicons=bujodefaulticons$/;"	v
+j	plugin/bujovim.vim	/^    let j=j+1$/;"	v
+j	plugin/bujovim.vim	/^let j=0$/;"	v

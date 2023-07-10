@@ -14,29 +14,29 @@ endif
 
 let g:bulletjournalicons=bujodefaulticons
 
-echo g:bulletjournalicons
+" echo g:bulletjournalicons
 
 
 " Override default filetype for Bullet journal {{{2
-if g:bullet_journal_extension=='markdown'
-  echo 'markdown settings loaded'
-  let g:bujovimheader='\#'
-elseif g:bullet_journal_extension=='rmarkdown'
-  echo 'rmarkdown settings loaded'
-  let g:bujovimheader='\#'
-elseif g:bullet_journal_extension =='vimwiki'
-  echo 'vimwiki settings loaded'
-  let g:bujovimheader='\='
-elseif g:bullet_journal_extension =='wiki'
-  echo 'wiki.vim settings loaded'
-  let g:bujovimheader='\#'
-elseif g:bullet_journal_extension == 'org'
-  echo 'orgmode settings loaded'
-  let g:bujovimheader='\*'
-else
-  echo 'markdown settings loaded'
-  let g:bujovimheader='\#'
-endif
+" if g:bullet_journal_extension=='markdown'
+"   echo 'markdown settings loaded'
+"   let g:bujovimheader='\#'
+" elseif g:bullet_journal_extension=='rmarkdown'
+"   echo 'rmarkdown settings loaded'
+"   let g:bujovimheader='\#'
+" elseif g:bullet_journal_extension =='vimwiki'
+"   echo 'vimwiki settings loaded'
+"   let g:bujovimheader='\='
+" elseif g:bullet_journal_extension =='wiki'
+"   echo 'wiki.vim settings loaded'
+"   let g:bujovimheader='\#'
+" elseif g:bullet_journal_extension == 'org'
+"   echo 'orgmode settings loaded'
+"   let g:bujovimheader='\*'
+" else
+"   echo 'markdown settings loaded'
+"   let g:bujovimheader='\#'
+" endif
 " Bullet journal functions to add {{{1
 " Picker for note type {{{2
 

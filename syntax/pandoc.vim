@@ -1,6 +1,3 @@
-
-
-
 syn keyword Abujournal contained
 hi Abujournal ctermfg=red guifg=red
 

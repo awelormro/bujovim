@@ -52,9 +52,6 @@ Openbujo	plugin/bujovim.vim	/^command! -nargs=0 Openbujo call OpenBulletJournal(
 bujodefaulticons	plugin/bujovim.vim	/^    let bujodefaulticons[j]=g:bujoicons[j]$/;"	v
 bujodefaulticons	plugin/bujovim.vim	/^let bujodefaulticons=['\\.', 'x', 'o','\\*', '\\!', '\\-\\-', '»', '«', '+']$/;"	v
 bujovim	README.md	/^# bujovim$/;"	c
-g:bujovimheader	plugin/bujovim.vim	/^  let g:bujovimheader='\\#'$/;"	v
-g:bujovimheader	plugin/bujovim.vim	/^  let g:bujovimheader='\\*'$/;"	v
-g:bujovimheader	plugin/bujovim.vim	/^  let g:bujovimheader='\\='$/;"	v
 g:bullet_journal_extension	plugin/bujovim.vim	/^let g:bullet_journal_extension = get(g:, 'bulletjournalextension',    'markdown')$/;"	v
 g:bulletjournalicons	plugin/bujovim.vim	/^let g:bulletjournalicons=bujodefaulticons$/;"	v
 j	plugin/bujovim.vim	/^    let j=j+1$/;"	v
